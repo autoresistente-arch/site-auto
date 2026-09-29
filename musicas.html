@@ -1,378 +1,567 @@
 <!doctype html>
 <html lang="pt-BR">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Tormenta MC — Músicas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Músicas — Tormenta MC</title>
+    <meta
+      name="description"
+      content="Discografia do Tormenta MC: álbuns, EPs, singles, videoclipes e próximos lançamentos."
+    />
+    <meta name="author" content="Maurício Silva, Tormenta MC" />
+    <meta name="theme-color" content="#070b10" />
+    <meta property="og:title" content="Músicas — Tormenta MC" />
+    <meta
+      property="og:description"
+      content="Discografia do Tormenta MC: álbuns, EPs, singles, videoclipes e próximos lançamentos."
+    />
+    <meta
+      property="og:image"
+      content="/resources/img/capa-herdeirosdocaos-oficial.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      :root {
-        --bg: #061329;
-        --panel: rgba(8, 28, 57, 0.72);
-        --line: rgba(91, 170, 255, 0.24);
-        --text: #f4f9ff;
-        --muted: #9bb6d5;
-        --blue: #55b9ff;
-      }
-      * {
-        box-sizing: border-box;
-      }
       body {
         margin: 0;
-        color: var(--text);
-        font-family: Inter, system-ui, sans-serif;
-        background:
-          radial-gradient(
-            circle at 75% 10%,
-            rgba(33, 130, 255, 0.24),
-            transparent 34%
-          ),
-          linear-gradient(145deg, #020b19 0%, #08234b 48%, #03152e 100%);
         min-height: 100vh;
-      }
-      body:before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        background: linear-gradient(
-          120deg,
-          transparent 20%,
-          rgba(75, 171, 255, 0.05) 50%,
-          transparent 80%
-        );
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .wrap {
-        max-width: 1160px;
-        margin: auto;
-        padding: 0 28px;
-      }
-      header {
-        height: 78px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-bottom: 1px solid var(--line);
-        backdrop-filter: blur(14px);
-      }
-      .brand {
-        font-weight: 900;
-        font-size: 21px;
-        letter-spacing: -0.04em;
-      }
-      .brand span {
-        color: var(--blue);
-      }
-      .nav {
-        display: flex;
-        gap: 24px;
-        font-size: 14px;
-        color: #b9cce2;
-      }
-      .nav a:hover,
-      .nav .active {
-        color: #fff;
-        text-shadow: 0 0 18px rgba(85, 185, 255, 0.8);
-      }
-      main {
-        padding-bottom: 70px;
-      }
-      .hero {
-        padding: 90px 0 70px;
-      }
-      .eyebrow {
-        font-size: 12px;
-        color: #72c7ff;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        margin-bottom: 14px;
-      }
-      .hero h1 {
-        font-size: clamp(52px, 8vw, 92px);
-        line-height: 0.9;
-        letter-spacing: -0.07em;
-        margin: 0 0 25px;
-        text-shadow: 0 0 45px rgba(65, 164, 255, 0.25);
-      }
-      .hero p,
-      .intro {
-        max-width: 700px;
-        color: var(--muted);
-        font-size: 17px;
-        line-height: 1.7;
-      }
-      .buttons {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 28px;
-      }
-      .btn {
-        display: inline-flex;
-        padding: 12px 18px;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #73ceff, #2589e9);
-        color: #021024;
-        font-size: 13px;
-        font-weight: 800;
-        box-shadow: 0 8px 28px rgba(28, 139, 236, 0.25);
-      }
-      .btn.alt {
-        background: rgba(8, 30, 62, 0.6);
-        border: 1px solid var(--line);
-        color: #d9efff;
-      }
-      .section {
-        padding: 25px 0 70px;
-      }
-      .section h2 {
-        font-size: 34px;
-        letter-spacing: -0.05em;
-        margin: 0 0 12px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-        margin-top: 28px;
-      }
-      .card {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 25px;
-        min-height: 180px;
-        box-shadow: 0 18px 55px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(15px);
-        transition: 0.2s;
-      }
-      .card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(94, 191, 255, 0.58);
-        box-shadow: 0 20px 60px rgba(20, 120, 220, 0.18);
-      }
-      .card h3 {
-        margin: 8px 0;
-        font-size: 22px;
-      }
-      .tag {
-        font-size: 10px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #65c2ff;
-      }
-      .card p {
-        font-size: 14px;
-        color: var(--muted);
+        flex-direction: column;
+        font-family: var(--font-body);
+        font-size: 1.0625rem;
         line-height: 1.6;
-      }
-      .date {
-        font-size: 12px;
-        color: #7897b8;
-      }
-      .glow {
-        height: 2px;
-        width: 100%;
-        background: linear-gradient(90deg, transparent, #4db7ff, transparent);
-        opacity: 0.6;
-        margin: 10px 0 45px;
-      }
-      footer {
-        border-top: 1px solid var(--line);
-        padding: 40px 0;
-        color: #86a5c7;
-        font-size: 13px;
-      }
-      .foot {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-      .links {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-      .links a:hover {
-        color: #fff;
-      }
-      @media (max-width: 760px) {
-        .nav {
-          gap: 10px;
-          font-size: 12px;
-          flex-wrap: wrap;
-          justify-content: flex-end;
-        }
-        .grid {
-          grid-template-columns: 1fr;
-        }
-        .wrap {
-          padding: 0 18px;
-        }
+        color: var(--text);
+        background:
+          linear-gradient(
+            180deg,
+            rgba(7, 11, 16, 0.55) 0%,
+            rgba(7, 11, 16, 0.92) 55vh,
+            var(--bg) 100vh
+          ),
+          url("assets/img/fundo.jpg") center top / cover no-repeat fixed,
+          var(--bg);
       }
     </style>
   </head>
+
   <body>
-    <div class="wrap">
-      <header>
-        <a class="brand" href="index.html">TORMENTA <span>MC</span></a>
-        <nav class="nav">
-          <a href="index.html">Início</a
-          ><a class="active" href="musicas.html">Músicas</a
-          ><a href="loja.html">Loja</a><a href="sobre.html">Sobre</a
-          ><a href="contato.html">Contato</a>
-        </nav>
-      </header>
-      <main>
-        <section class="hero">
-          <div class="eyebrow">Discografia</div>
-          <h1>Músicas.</h1>
-          <p>Álbuns, EPs, singles e videoclipes da caminhada do Tormenta MC.</p>
-        </section>
-        <section class="section">
-          <h2>Álbuns e EPs</h2>
-          <div class="grid">
-            <article class="card">
-              <div class="tag">2026 · ÁLBUM</div>
-              <h3>Tormenta de um Furacão</h3>
-               <img
-                width="290"
-                height="270"
-                src="assets/img/tormentaDeUmFUracaoCAPAALBUM.jpg"
-              />
-              <div class="date">EM CONSTRUÇÃO</div>
-              <p>Somente boom-bap, sujeira e letras pesadas, breve nas lojas. 
-                12 faixas, 5 feats e um videoclipe.</p>
-              <a class="btn" href="https://open.spotify.com/" target="_blank"
-                >Ouvir Prévia</a
-              >
-            </article>
-            <article class="card">
-              <div class="tag">2025 · Lançamento</div>
-              <h3>Jovens Alienígenas</h3>
-              <img
-                width="290"
-                height="270"
-                src="assets/img/capa-JOVENS-ALIENS.jpeg"
-              />
-              <div class="date">21 de Novembro de 2025</div>
-              <p>
-                Gibi MC se junta com <b>TORMENTA MC</b> e Jovem Alien para
-                montar um álbum somente de TRAP. 12 faixas, 8 feats,
-                participação de SuperDrill.
-              </p>
+    <a
+      class="skip-link"
+      href="https://autoresistente2.netlify.app/musicas#conteudo"
+      >Pular para o conteúdo</a
+    >
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="https://autoresistente2.netlify.app/"
+          >Tormenta <span>MC</span></a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Principal">
+          <ul>
+            <li><a href="https://autoresistente2.netlify.app/">Início</a></li>
+            <li>
               <a
-                class="btn"
-                href="https://open.spotify.com/intl-pt/album/6kO5eEPysaZ9DW4adZejNg?si=b9bBPPZWQXewQifiWOjKxQ="_blank"
-                >Ouvir</a
+                aria-current="page"
+                href="https://autoresistente2.netlify.app/musicas"
+                >Músicas</a
               >
-            </article>
-            
-            <article class="card">
-              <div class="tag">2023 · Álbum</div>
-              <h3>Amuletos Futuristas</h3>
-              
-               <img
-                width="290"
-                height="270"
-                src="assets/img/amuletos-capa.png"
-              />
-              <div class="date">6 de fevereiro de 2023</div>
-              <p>Experimental, contém a faixa 
-                Serenidade que tem o berimbau no beat e atabaque. 
-                Também parceria com Mestre do Freestyle.</p>
-              <a class="btn" href="https://open.spotify.com/intl-pt/album/2gakvpBX45S3AiueK1wjPo?si=6e1X2OCYSseUjrFmYxCweQ" target="_blank"
-                >Ouvir</a
+            </li>
+            <li><a href="https://autoresistente2.netlify.app/loja">Loja</a></li>
+            <li>
+              <a href="https://autoresistente2.netlify.app/sobre">Sobre</a>
+            </li>
+            <li>
+              <a
+                class="nav-cta"
+                href="https://autoresistente2.netlify.app/contato"
+                >Contato</a
               >
-            </article>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="eyebrow">Discografia</p>
+          <h1>Músicas</h1>
+          <p class="lead">
+            Álbuns, EPs, singles e videoclipes. Escolha uma faixa e aperte o
+            play na sua plataforma favorita.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-ghost"
+              href="https://autoresistente2.netlify.app/musicas#albuns"
+              >Álbuns e EPs</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://autoresistente2.netlify.app/musicas#singles"
+              >Singles</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://autoresistente2.netlify.app/musicas#videoclipes"
+              >Videoclipes</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://autoresistente2.netlify.app/musicas#em-breve"
+              >Em breve</a
+            >
           </div>
-        </section>
-        <section class="section">
-          <h2>Singles</h2>
-          <div class="grid">
-            <article class="card">
-              <div class="tag">Feat · 2025</div>
-              <h3>Minha Brisa</h3>
-              <div class="date">15 de maio de 2025</div>
-              <p>Um reggae maneiro.</p>
-              <a class="btn" href="https://open.spotify.com/" target="_blank"
-                >Ouvir</a
-              >
-            </article>
-            <article class="card">
-              <div class="tag">Single · 2024</div>
-              <h3>Xeque Mate</h3>
-              <div class="date">12 de abril de 2024</div>
-              <p>Um Detroit maneiro.</p>
-              <a class="btn" href="https://open.spotify.com/" target="_blank"
-                >Ouvir</a
-              >
-            </article>
-            <article class="card">
-              <div class="tag">Single · 2023</div>
-              <h3>Iphome</h3>
-              <div class="date">15 de setembro de 2023</div>
-              <p>Uns passam tanta fome, uns comem seus iPhones.</p>
-              <a class="btn" href="https://open.spotify.com/" target="_blank"
-                >Ouvir</a
-              >
-            </article>
-            <article class="card">
-              <div class="tag">Single · 2022</div>
-              <h3>Tá Tudo Muito Alto</h3>
-              <div class="date">20 de outubro de 2022</div>
-              <p>Duração do som: 4:20.</p>
-              <a class="btn" href="https://open.spotify.com/" target="_blank"
-                >Ouvir</a
-              >
-            </article>
-          </div>
-        </section>
-        <section class="section">
-          <h2>Videoclipes</h2>
-          <div class="grid">
-            <article class="card">
-              <div class="tag">Clipe · 2025</div>
-              <h3>Amuletos Futuristas</h3>
-              <p>Gravado na trilha do Dólmen da Oração.</p>
-              <a class="btn" href="https://www.youtube.com/" target="_blank"
-                >Assistir</a
-              >
-            </article>
-            <article class="card">
-              <div class="tag">Clipe · 2025</div>
-              <h3>Engenheiros do Breu</h3>
-              <p>Um trap em homenagem aos Engenheiros do Hawaii.</p>
-              <a class="btn" href="https://www.youtube.com/" target="_blank"
-                >Assistir</a
-              >
-            </article>
-            <article class="card">
-              <div class="tag">Clipe · 2023</div>
-              <h3>Gratindom</h3>
-              <p>Uma mistura de trap e reggae, com berimbau no beat.</p>
-              <a class="btn" href="https://www.youtube.com/" target="_blank"
-                >Assistir</a
-              >
-            </article>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="foot">
-          <strong>Tormenta MC</strong>
-          <div class="links">
-            <a href="index.html">Início</a><a href="musicas.html">Músicas</a
-            ><a href="loja.html">Loja</a><a href="sobre.html">Sobre</a
-            ><a href="contato.html">Contato</a>
-          </div>
-          <span>© 2026 Tormenta MC</span>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <section class="section" id="albuns" aria-labelledby="albuns-titulo">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="albuns-titulo">Álbuns e EPs</h2>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/capa-herdeirosdocaos-oficial.png"
+                  alt="Capa de Herdeiros do Caos"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Lançamento</span>
+                <h3>Herdeiros do Caos</h3>
+                <span class="meta">08 de agosto de 2025</span>
+                <p>Um experimental maneiro.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/capa-revolucao-interna.png"
+                  alt="Capa de Revolução Interna"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">EP</span>
+                <h3>Revolução Interna</h3>
+                <span class="meta">4 de outubro de 2024</span>
+                <p>Dub, trap, boom bap com capoeira, experimental.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/amuletos-capa.png"
+                  alt="Capa de Amuletos Futuristas"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Álbum</span>
+                <h3>Amuletos Futuristas</h3>
+                <span class="meta">6 de fevereiro de 2023</span>
+                <p>Experimental com rap, primeiro álbum na pista.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="singles" aria-labelledby="singles-titulo">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="singles-titulo">Singles</h2>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/minhabrisa.png"
+                  alt="Capa de Minha Brisa"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Feat</span>
+                <h3>Minha Brisa</h3>
+                <span class="meta">15 de maio de 2025</span>
+                <p>Um reggae maneiro.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/capa-xequemate.png"
+                  alt="Capa de Xeque Mate"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Single</span>
+                <h3>Xeque Mate</h3>
+                <span class="meta">12 de abril de 2024</span>
+                <p>Um Detroit maneiro.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/iphome.png"
+                  alt="Capa de Iphome"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Single</span>
+                <h3>Iphome</h3>
+                <span class="meta">15 de setembro de 2023</span>
+                <p>Uns passam tanta fome, uns comem seus iPhones.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/tatudomuitoalto.jpg"
+                  alt="Capa de Tá Tudo Muito Alto"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Single</span>
+                <h3>Tá Tudo Muito Alto</h3>
+                <span class="meta">20 de outubro de 2022</span>
+                <p>Duração do som: 4:20.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Ouvir</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section"
+        id="videoclipes"
+        aria-labelledby="videoclipes-titulo"
+      >
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="videoclipes-titulo">Videoclipes</h2>
+            <a
+              class="card-link"
+              href="https://www.youtube.com/@toormenta"
+              target="_blank"
+              rel="noopener"
+              >Canal no YouTube</a
+            >
+          </div>
+          <div class="grid">
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/amuletos.png"
+                  alt="Capa de Amuletos Futuristas"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Clipe</span>
+                <h3>Amuletos Futuristas</h3>
+                <span class="meta">28 de maio de 2025</span>
+                <p>Gravado na trilha do Dólmen da Oração.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://www.youtube.com/@toormenta"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/capa-engenheiros.jpg"
+                  alt="Capa de Engenheiros do Breu"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Clipe</span>
+                <h3>Engenheiros do Breu</h3>
+                <span class="meta">10 de maio de 2025</span>
+                <p>Um trap em homenagem aos Engenheiros do Hawaii.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://www.youtube.com/@toormenta"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir</a
+                >
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/gratindom.png"
+                  alt="Capa de Gratindom"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Clipe</span>
+                <h3>Gratindom</h3>
+                <span class="meta">6 de fevereiro de 2023</span>
+                <p>Uma mistura de trap e reggae, com berimbau no beat.</p>
+                <a
+                  class="card-link stretched"
+                  href="https://www.youtube.com/@toormenta"
+                  target="_blank"
+                  rel="noopener"
+                  >Assistir</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="em-breve" aria-labelledby="em-breve-titulo">
+        <div class="wrap">
+          <div class="section-head">
+            <h2 id="em-breve-titulo">Em breve</h2>
+          </div>
+          <div class="grid grid-2">
+            <article class="card card-row">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/capa-JOVENS-ALIENS.jpeg"
+                  alt="Capa de Jovens Alienígenas"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag">Álbum lançado</span>
+                <h3>Jovens Alienígenas</h3>
+                <span class="meta">11 de novembro de 2025</span>
+                <p>Álbum somente de trap.</p>
+              </div>
+            </article>
+            <article class="card card-row">
+              <div class="card-media">
+                <img
+                  src="./Músicas — Tormenta MC_files/Capa de CD Rock Grunge (2).jpg"
+                  alt="Capa de Tormenta de um Furacão"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="card-body">
+                <span class="tag is-soon">Em construção</span>
+                <h3>Tormenta de um Furacão</h3>
+                <span class="meta">2026</span>
+                <p>Álbum somente de boom bap.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="https://autoresistente2.netlify.app/"
+              >Tormenta <span>MC</span></a
+            >
+            <p>Rap, capoeira e experimentação direto da Ilha da Magia.</p>
+          </div>
+          <div>
+            <h2>Navegação</h2>
+            <ul>
+              <li><a href="https://autoresistente2.netlify.app/">Início</a></li>
+              <li>
+                <a href="https://autoresistente2.netlify.app/musicas"
+                  >Músicas</a
+                >
+              </li>
+              <li>
+                <a href="https://autoresistente2.netlify.app/loja">Loja</a>
+              </li>
+              <li>
+                <a href="https://autoresistente2.netlify.app/sobre">Sobre</a>
+              </li>
+              <li>
+                <a href="https://autoresistente2.netlify.app/contato"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Ouça</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://open.spotify.com/intl-pt/artist/2NZoeSM0OEeNVUEhRuqI0m"
+                  target="_blank"
+                  rel="noopener"
+                  >Spotify</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/@toormenta"
+                  target="_blank"
+                  rel="noopener"
+                  >YouTube</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.deezer.com/pt/artist/185431557"
+                  target="_blank"
+                  rel="noopener"
+                  >Deezer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://music.amazon.com.br/artists/B0BH6W6FZV/autoresistente"
+                  target="_blank"
+                  rel="noopener"
+                  >Amazon Music</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://audiomack.com/autoresistente"
+                  target="_blank"
+                  rel="noopener"
+                  >Audiomack</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://music.apple.com/br/artist/autoresistente/1647219637"
+                  target="_blank"
+                  rel="noopener"
+                  >Apple Music</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="year">2026</span> Tormenta MC. Todos os direitos
+            reservados.
+          </p>
+          <p>
+            Desenvolvido por
+            <a
+              href="https://www.mauriciosilvadossantos.com.br/"
+              target="_blank"
+              rel="noopener"
+              >Maurício Silva Dev</a
+            >
+            ·
+            <a href="https://autoresistente2.netlify.app/musicas#conteudo"
+              >Voltar ao topo ↑</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="./Músicas — Tormenta MC_files/site.js.download"
+      defer=""
+    ></script>
   </body>
 </html>
